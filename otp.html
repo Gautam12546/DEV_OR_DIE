@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTP Verification</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-family: 'Poppins',sans-serif;
+  }
+body {
+    background-size: cover;
+    background-image: transparent;
+}
+  .container {
+    text-align: center;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    width: 80%;
+    max-width: 400px;
+    border: 5px white solid;
+  }
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .otp-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .otp-input input[type="text"] {
+    padding: 10px;
+    width: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 5px;
+  }
+  #verifyButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  #verifyButton:hover {
+    background-color: #0056b3;
+  }
+  #message {
+    margin-top: 20px;
+    color: #007bff;
+  }
+  .container h2{
+    color: white;
+  } 
+  .container{
+    margin-left: 45%;
+  }
+  @media (max-width: 600px) {
+    .container {
+        width: 90%; /* Adjusting width for smaller screens */
+        margin: auto; /* Centering the container */
+    }
+}
+</style>
+</head>
+<body background="pop.jpg">
+<div class="container">
+  <h2>OTP VERIFICATION</h2>
+  <div class="otp-input">
+    <input type="text" maxlength="1">
+    <input type="text" maxlength="1">
+    <input type="text" maxlength="1">
+    <input type="text" maxlength="1">
+  </div>
+  <button id="verifyButton" onclick="verifyOTP()">Verify OTP</button>
+  <p id="message"></p>
+</div>
+<script>
+  function verifyOTP() {
+    var otp = '';
+    document.querySelectorAll('.otp-input input[type="text"]').forEach(function(input) {
+      otp += input.value;
+    });
+    var validOTP = "1234";
+    if (otp === validOTP) {
+      document.getElementById("message").innerHTML = "OTP verified successfully!";
+      document.getElementById("message").style.color = "#28a745";
+    } else {
+      document.getElementById("message").innerHTML = "Invalid OTP. Please try again.";
+      document.getElementById("message").style.color = "#dc3545";
+    }
+  }
+</script>
+</body>
+</html>

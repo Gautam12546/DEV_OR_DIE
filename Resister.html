@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+        body {
+            background-size: cover;
+            background-image: transparent;
+            font-family: 'Poppins',sans-serif;
+        }
+        
+        table {
+            background-color: black;
+            border: 5px solid white;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out; /* Add animation */
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #type {
+            width: 370px;
+            height: 32px;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            border-bottom: 3px solid white;
+            color: white;
+            font-size: 25px;
+        }
+        
+        input::-webkit-input-placeholder {
+            font-size: 20px;
+            line-height: 3;
+            color: white;
+        }
+        @media only screen and (max-width: 600px) {
+            table {
+                width: 95%;
+            }
+            #type, #btn {
+                width: 80%;
+            }
+        }
+        #btn {
+            width: 250px;
+            height: 35px;
+            font-size: 20px;
+            background-color: orange;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+        .submit-btn:hover{
+     opacity:0.80;
+} 
+        
+        #forgotPassword {
+            color: white;
+            font-size: 16px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            10%, 90% { transform: translateX(-10px); }
+            20%, 80% { transform: translateX(10px); }
+            30%, 50%, 70% { transform: translateX(-10px); }
+            40%, 60% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+        }
+        #adminp {
+        border-radius: 50%;
+        border: 5px solid white;
+        }
+
+        .main{
+            padding-right: 50%;
+
+        }
+        
+        .shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+    </style>
+</head>
+<body background="back.jpg">
+    <div class="main">
+        <br><br><br><br><br><br>
+        <table width="25%" border="0" cellspacing="40" align="center">
+            <tr>
+                <td align="center" ><img src="admin.png" width="50%" id="adminp"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Name..." id="type"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Email..." id="type"></td>
+            </tr>
+            <tr>
+                <td><input type="password" placeholder="Password" id="type"></td>
+            </tr>
+            <tr>
+                <td align="center" class="submit-btn"><input type="submit" value="Resister!" id="btn"></td>
+            </tr>
+            <tr>
+                <td align="center"><span id="forgotPassword">Already have account <a href=""> Login here</a></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('forgotPassword').addEventListener('click', function() {
+            window.location.href = 'forgotPassword.html';
+        });
+        document.getElementById('btn').addEventListener('click', function() {
+            document.querySelector('table').classList.add('shake');
+            setTimeout(function() {
+                document.querySelector('table').classList.remove('shake');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
