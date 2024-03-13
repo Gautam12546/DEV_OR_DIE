@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+
+:root{
+    --bg-color: #052841;
+    --second-bg-color: #e5ebee;
+    --text-color: #0f0e0e;
+    --main-color: #00abf0;
+  }
+
+   .container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .navbar{
+    top: 0;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+   }
+   .myprf{
+    height: 100%;
+    width: 401px;
+    background-color: #9be8f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+   }
+   .userprf{
+    height: 100%;
+    width: 1136px;
+    background-color:  #9be8f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
+
+   .profilem{
+    height: 100%;
+   
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   }
+   .otherm{
+    height: 100%;
+    width: 315px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+   }
+   .myname{
+     height: 100%;
+     width: 230px;
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     font-size: 11px;
+     padding-left: 4px;
+   }
+   .threedot{
+     height: 50px;
+     width: 50px;
+     /* background-color: aquamarine; */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 30px;
+     margin-left: 30px;
+     cursor: pointer;
+   }
+
+   .profileu{
+    height: 100%;
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   }
+   .otheru{
+    height: 100%;
+    /* background-color: #d76c6c; */
+    width: 1049px;
+     display: flex;
+    align-items: center; 
+    justify-content: space-between;
+   }
+   .usernameu{
+    height: 100%;
+    /* background-color: #25e117; */
+    width: 300px;
+     display: flex;
+     align-items: center;
+     justify-content: start;
+     font-size: 11px;
+     padding-left: 4px;
+   }
+   .call{
+    height: 100%; 
+    /* background-color: #41583f; */
+    
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 60px;
+    gap: 10px;
+   }
+   .calls{
+    height: 100%;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   }
+  .voicei{
+   height: 50px;
+   width: 50px; 
+   background-color: darkturquoise;
+   display: flex;   
+   align-items: center;
+   justify-content: center;
+   font-size: 22px;
+   cursor: pointer;
+   color: #0f1010;
+   border-radius: 50%;
+  }
+  .videoi{
+   height: 50px;
+   width: 50px;
+   background-color: darkturquoise;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 27.5px;
+   cursor: pointer;
+   color: #060606;
+   border-radius: 50%;
+   padding-left: 3px;
+   padding-bottom: 1px;
+}
+.threedotu{
+    height: 50px;
+    width: 50px;
+    /* background-color: #25e117; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    color: #060606;   
+}
+
+   .prfm{
+    height: 50px;
+    width: 50px;
+    background-color: #1dade5;
+    border-radius: 50%;
+   }
+   .mainpage{
+    position: fixed;
+    height: 730px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+   }
+   .leftbx{
+    position: relative;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    z-index: 1;
+   }
+    .leftchat{
+    height: 100%;
+    width: 400px;
+    background-color: rgb(254, 255, 253); 
+   } 
+   
+    .rightbx{
+    height: 730px;
+    width: 1136px;
+    background-color: rgb(4, 4, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    
+   } 
+   .chatbody{
+    width: 100%;
+    height: 650px;
+    background-color: #88a1ab;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .chatbox{
+    height: 650px;
+    width: 1130px;
+    background-color: brown;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   /* this is message  container */
+   .message-container{
+    height: 650px;
+    width: 1130px;
+    background-color: rgb(213, 229, 227);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding-right: 25px;
+    padding-bottom: 15px;
+   }
+
+   .message {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .user-message {
+    background-color: #A334FA;
+    /*background: linear-gradient(135deg,rgb(142, 2, 142),rgb(58, 58, 216));*/
+    color: white;
+    text-align: right;
+  }
+
+
+
+   .messagebody{
+    width: 100%;
+    height: 80px;
+    background-color: #f6f6fa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 1px;
+   }
+   .file{
+    height: 70px;
+    width: 70px;
+    /* background-color: rgb(203, 210, 196); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 11px; */
+   }
+   .typing-area{
+    height: 70px;
+    width: 970px;
+    /* background-color: chartreuse; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+   }
+   .textareaa{
+    height: 53px;
+    width: 900px;
+    background-color:  rgb(154, 201, 202);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    resize: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 16px;
+    border: 1.4px solid black;
+    overflow-y: none;
+   }
+
+   .send{
+    height: 55px;
+    width: 55px;
+    background-color: darkturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding-left: 9px;
+   }
+
+   .sendbtn{
+    height: 70px;
+    width: 70px;
+     /* background-color: rgb(255, 34, 0);  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* padding-left: 20px;  */
+   }
+   .sendbox{
+    height: 55px;
+    width: 55px;
+    background-color: darkturquoise;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    cursor: pointer;
+    border-radius: 50%;
+   }
